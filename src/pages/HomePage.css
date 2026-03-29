@@ -1,0 +1,404 @@
+.home-page {
+    background: #f1f3f6;
+}
+
+/* ===================== BANNER CAROUSEL ===================== */
+.banner-carousel {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    max-width: 100%;
+}
+
+.banner-slides {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+}
+
+.banner-slide {
+    min-width: 100%;
+    display: block;
+}
+
+/* CSS-only gradient banner */
+.banner-css {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    height: 100%;
+}
+
+/* Decorative background circles */
+.b-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    pointer-events: none;
+}
+.b-c1 { width: 380px; height: 380px; top: -140px; right: -60px; }
+.b-c2 { width: 220px; height: 220px; bottom: -90px; right: 220px; }
+.b-c3 { width: 100px; height: 100px; top: 30px; left: 42%; background: rgba(255,255,255,0.05); }
+
+/* Left text */
+.banner-text-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    max-width: 520px;
+}
+
+.banner-tag-pill {
+    display: inline-block;
+    background: #ffe500;
+    color: #212121;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.banner-h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    margin: 0;
+}
+
+.banner-p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.banner-shop-btn {
+    display: inline-block;
+    background: white;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.banner-css:hover .banner-shop-btn {
+    transform: translateX(6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Right emoji art */
+.banner-emoji-side {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    z-index: 1;
+    flex-shrink: 0;
+    padding-bottom: 16px;
+}
+
+.b-emoji {
+    display: block;
+    line-height: 1;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
+    animation: floatEmoji 3s ease-in-out infinite;
+}
+
+.b-emoji-0 { font-size: 96px; }
+.b-emoji-1 { font-size: 68px; animation-delay: 0.3s; }
+.b-emoji-2 { font-size: 52px; animation-delay: 0.6s; }
+
+@keyframes floatEmoji {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Dots */
+.banner-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+}
+
+.banner-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.banner-dot.active {
+    background: white;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Arrows */
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.92);
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 26px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    line-height: 1;
+    color: #212121;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.banner-arrow:hover { background: white; }
+.banner-prev { left: 14px; }
+.banner-next { right: 14px; }
+
+/* ===================== HOME CONTENT ===================== */
+.home-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 12px 16px;
+}
+
+/* ===================== CATEGORY TILES ===================== */
+.category-tiles-section {
+    background: white;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-tiles {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 16px;
+}
+
+.category-tiles::-webkit-scrollbar { display: none; }
+
+.category-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: transform 0.2s;
+}
+
+.category-tile:hover { transform: scale(1.08); }
+
+.category-tile-img-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s;
+}
+
+.category-tile:hover .category-tile-img-wrap {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Emoji tile */
+.category-tile-emoji {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.category-tile-label {
+    font-size: 12px;
+    color: #212121;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ===================== PROMO BANNERS ===================== */
+.promo-banners {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.promo-banner {
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    min-height: 100px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.promo-tag {
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.2);
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.promo-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.promo-subtitle {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.promo-icon {
+    font-size: 44px;
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+/* ===================== PRODUCT SECTIONS ===================== */
+.product-section {
+    background: white;
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f3f6;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.section-subtitle {
+    font-size: 13px;
+    color: #878787;
+    margin-top: 2px;
+}
+
+.view-all-btn {
+    background: #2874f0;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.view-all-btn:hover { background: #1a5dc0; }
+
+.products-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.product-grid-item { min-width: 0; }
+
+/* Loading skeleton */
+.loading-sections { display: flex; flex-direction: column; gap: 12px; }
+
+.section-skeleton {
+    height: 350px;
+    background: white;
+    border-radius: 2px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+    .products-grid-horizontal { grid-template-columns: repeat(3, 1fr); }
+    .promo-banners { grid-template-columns: 1fr 1fr; }
+    .promo-banners .promo-banner:last-child { display: none; }
+    .banner-css { padding: 0 60px; }
+    .banner-h2 { font-size: 30px; }
+}
+
+@media (max-width: 768px) {
+    .banner-carousel { height: 200px; }
+    .banner-css { padding: 0 28px; }
+    .banner-h2 { font-size: 22px; }
+    .banner-p { font-size: 13px; }
+    .b-emoji-0 { font-size: 64px; }
+    .b-emoji-1 { font-size: 44px; }
+    .b-emoji-2 { font-size: 34px; }
+    .products-grid-horizontal { grid-template-columns: repeat(2, 1fr); }
+    .promo-banners { grid-template-columns: 1fr; }
+    .promo-banners .promo-banner:last-child { display: flex; }
+}
+
+@media (max-width: 480px) {
+    .banner-carousel { height: 170px; }
+    .banner-css { padding: 0 16px; }
+    .banner-h2 { font-size: 18px; }
+    .banner-tag-pill { font-size: 10px; }
+    .banner-shop-btn { font-size: 12px; padding: 8px 16px; }
+    .b-emoji-0 { font-size: 50px; }
+    .b-emoji-1 { font-size: 36px; }
+    .b-emoji-2 { display: none; }
+    .products-grid-horizontal { gap: 8px; }
+}

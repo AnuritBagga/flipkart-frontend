@@ -1,0 +1,58 @@
+.profile-page { background: #f1f3f6; min-height: calc(100vh - 120px); padding: 16px; }
+.profile-container { max-width: 1000px; margin: 0 auto; display: flex; gap: 16px; align-items: flex-start; }
+
+.profile-sidebar {
+  width: 260px; flex-shrink: 0; background: white;
+  border-radius: 2px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow: hidden; position: sticky; top: 90px;
+}
+
+.profile-user-info {
+  display: flex; align-items: center; gap: 14px;
+  padding: 20px; background: linear-gradient(135deg, #2874f0, #1565c0);
+}
+
+.profile-avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.profile-avatar-placeholder {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(255,255,255,0.2); color: white;
+  font-size: 24px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.profile-greeting { font-size: 12px; color: rgba(255,255,255,0.7); }
+.profile-name { font-size: 16px; font-weight: 700; color: white; }
+
+.profile-nav { padding: 8px 0; }
+.profile-nav-item {
+  display: flex; align-items: center; gap: 14px; padding: 14px 20px;
+  text-decoration: none; font-size: 14px; color: #212121;
+  border-bottom: 1px solid #f5f5f5; transition: background 0.15s;
+  background: none; border-left: none; border-right: none; border-top: none;
+  width: 100%; text-align: left; cursor: pointer; font-family: 'Roboto', sans-serif;
+}
+.profile-nav-item:hover { background: #f5f5f5; color: #2874f0; }
+.profile-nav-item.logout { color: #c62828; border-bottom: none; }
+.profile-nav-item.logout:hover { background: #ffebee; }
+
+.profile-main { flex: 1; }
+.profile-section-title { font-size: 20px; font-weight: 700; color: #212121; margin-bottom: 16px; }
+
+.profile-card { background: white; border-radius: 2px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow: hidden; }
+.profile-field {
+  display: flex; align-items: center; gap: 0;
+  padding: 16px 24px; border-bottom: 1px solid #f0f0f0;
+}
+.profile-field:last-child { border-bottom: none; }
+.profile-field label { width: 180px; font-size: 13px; color: #878787; font-weight: 500; }
+.profile-value { font-size: 14px; color: #212121; }
+
+@media (max-width: 768px) {
+  .profile-container { flex-direction: column; }
+  .profile-sidebar { width: 100%; position: static; }
+}

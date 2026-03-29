@@ -1,0 +1,21 @@
+.search-page { background: #f1f3f6; min-height: calc(100vh - 120px); padding: 16px; }
+.search-container { max-width: 1300px; margin: 0 auto; }
+.search-header {
+  font-size: 16px; color: #878787; margin-bottom: 16px;
+  background: white; padding: 14px 20px; border-radius: 2px;
+}
+.search-count { font-weight: 700; color: #212121; }
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.search-no-results {
+  text-align: center; padding: 80px 20px;
+  background: white; border-radius: 2px;
+}
+.search-no-results h2 { font-size: 20px; margin: 16px 0 8px; }
+.search-no-results p { color: #878787; }
+@media (max-width: 1100px) { .search-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px) { .search-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px) { .search-grid { grid-template-columns: repeat(2, 1fr); } }

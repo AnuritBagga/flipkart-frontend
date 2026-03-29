@@ -1,0 +1,142 @@
+.footer {
+  background: #172337;
+  color: #fff;
+  margin-top: 24px;
+}
+
+.footer-top {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 40px 0 32px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 32px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-col-wide {
+  flex: 1.8;
+  display: flex;
+  gap: 32px;
+}
+
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #878787;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+}
+
+.footer-mail, .footer-registered {
+  flex: 1;
+}
+
+.footer-mail h4, .footer-registered h4 {
+  font-size: 12px;
+  color: #878787;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-mail address, .footer-registered address {
+  font-size: 12px;
+  color: white;
+  line-height: 1.8;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+.footer-registered p {
+  font-size: 12px;
+  color: white;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* Bottom */
+.footer-bottom {
+  padding: 16px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: white;
+}
+
+.footer-bottom-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-bottom-links a:hover { opacity: 1; }
+.footer-bottom-links span { opacity: 0.4; }
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 13px;
+  color: white;
+  opacity: 0.7;
+}
+
+.footer-payments img {
+  height: 24px;
+  filter: brightness(0.7);
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-col { min-width: calc(50% - 24px); }
+  .footer-col-wide { width: 100%; flex: none; }
+  .footer-bottom-inner { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .footer-col { min-width: 100%; }
+  .footer-col-wide { flex-direction: column; }
+}
